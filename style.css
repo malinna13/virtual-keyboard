@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+}
+
+.textarea {
+  margin: 50px auto;
+
+  display: block;
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 20px;
+}
+.notes {
+  width: 800px;
+  display: block;
+  padding-left: 72px;
+  margin: 50px auto;
+}
+.keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+
+  width: 800px;
+}
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 2px 2px 2px #8f8f8f;
+  transition: all 150ms linear;
+}
+.key:hover {
+  cursor: pointer;
+  background-color: white;
+}
+.key:active,
+.key.active {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 2px #8f8f8f;
+}
+.key.key-backspace {
+  width: 70px;
+  font-size: 12px;
+}
+
+.key.key-capslock,
+.key.key-leftshift,
+.key.key-rightshift,
+.key.key-enter {
+  width: 78px;
+  font-size: 12px;
+}
+
+.key.key-capslock.caps_on {
+  position: relative;
+}
+.key.key-capslock.caps_on::after {
+  content: "⇪";
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+.key.key-tab,
+.key.key-leftalt,
+.key.key-rightalt,
+.key.key-leftctrl,
+.key.key-rightctrl {
+  width: 70px;
+  font-size: 12px;
+}
+
+.key.key-space {
+  width: 221px;
+}
+.key.key-lang {
+  position: absolute;
+  right: 72px;
+  top: 0;
+  background: none;
+  box-shadow: none;
+}
